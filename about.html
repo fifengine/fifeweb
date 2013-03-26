@@ -12,13 +12,44 @@
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
+
+    <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      color: #5a5a5a;
+    }
+
+	.showcase-unit {
+	  padding: 5px;
+	  margin-bottom: 5px;
+	  font-size: 18px;
+	  font-weight: 200;
+	  line-height: 30px;
+	  color: inherit;
+	  background-color: #eeeeee;
+	  -webkit-border-radius: 6px;
+	     -moz-border-radius: 6px;
+	          border-radius: 6px;
+	}
+
+	.navbar .social-buttons {
+	    margin-top: 10px;
+	}
+
+    </style>
 </head>
 
 <body>
-	<div class="row">
-		<div class="container"><img src="img/logo.png" /></div>
+<div class="container-fluid span12">
+	<div class="row span12">
+		<img src="img/logo.png" />
 	</div>
-	<div class="container"><div class="row-fluid">
+	<div class="row span12">
 		<!-- Menu -->
 		<div class="navbar">
 			<div class="navbar-inner">
@@ -33,23 +64,24 @@
 					<li class="divider-vertical"></li>
 					<li><a href="blog.html">Blog</a></li>
 				</ul>
-        <div id="social-buttons" class="pull-right">
-           <iframe id="watch" src="http://ghbtns.com/github-btn.html?user=fifengine&repo=fifengine&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-          <iframe id="fork" src="http://ghbtns.com/github-btn.html?user=fifengine&repo=fifengine&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
-        </div>
+   	    		<div class="social-buttons pull-right">
+   	       			<iframe id="watch" src="http://ghbtns.com/github-btn.html?user=fifengine&repo=fifengine&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+   	      			<iframe id="fork" src="http://ghbtns.com/github-btn.html?user=fifengine&repo=fifengine&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+   	    		</div>
 			</div>
 		</div>
-
+	</div>
+	<div class="container-fluid span12">
 		<!-- Content -->
-		<div class="container">
-			<div class="span-12"><div class="m20">
-				<p><b>FIFE</b> is free and open-source cross-platform game engine.
+		<div class="row-fluid">
+			<div class="span8">
+				<p><b>FIFE</b> is free an open-source cross-platform game engine.
 				It features hardware-accelerated 2D graphics, integrated GUI, audio
-				support, level editor supporting rectangle and isometric maps,
+				support, map editor supporting top-down and isometric maps,
 				pathfinding, virtual filesystem and more.</p>
 				<p>The core is written in C++ which means that it is highly portable.
 				FIFE currently supports Windows, Linux and Mac.</p>
-				<p>Games utilising FIFE are programmed through Python scripting layer
+				<p>Games utilizing FIFE are programmed through Python scripting layer
 				on top of the base C++ API. Games can be also programmed using the
 				C++ layer directly.</p>
 				<p>FIFE is open-sourced under the terms of <a href="http://www.gnu.org/copyleft/lesser.html">LGPL license</a> so you can freely use
@@ -60,17 +92,45 @@
 					<li><a href="docs/index.html">API Documentation</a></li>
 					<li><a href="downloads.html">Downloads</a></li>
 				</ul>
-			</div></div>
-			<div class="span-6 last"><div class="m16 m16r blackbox">
+			</div>
+			<div class="showcase-unit span4">
 				<h3>Showcase</h3>
-				<img class="shci" src="img/shscreen1.png" />
-				<img class="shci" src="img/shscreen1.png" />
-				<div class="ml"><a href="screens.html">More screenshots</a></div>
-			</div></div>
+				<ul class="thumbnails">
+					<li class="row"><a href="img/screen2.png" class="thumbnail fancybox" rel="gallery" data-title-id="title-2"><img src="img/screen2.png" /></a></li>
+					<li class="row"><img class="thumbnail fancybox" rel="gallery" src="img/screen3.png" /></li>
+					<li class="row"><a class="btn btn-primary btn-large" href="screens.html">More screenshots</a></li>
+				</ul>
+			</div>
 		</div>
+		<footer>
+			<p class="text-center">Copyright &copy; 2012 FIFE engine, Design/XHTML/CSS by rivon</p>
+		</footer>
 	</div>
-	<div class="footer">Copyright &copy; 2012 FIFE engine, Design/XHTML/CSS by rivon</div>
-	</div>
+</div>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
+    <script type="text/javascript">
+        $(".fancybox").attr('rel', 'gallery').fancybox({
+            nextEffect: 'fade',
+            prevEffect: 'fade',
+            helpers : {
+                title: {
+                    type: 'inside'
+                }
+            },
+            beforeLoad: function() {
+                var el, id = $(this.element).data('title-id');
+
+                if (id) {
+                    el = $('#' + id);
+
+                    if (el.length) {
+                        this.title = el.html();
+                    }
+                }
+            }
+        });
+    </script>
 
 </body>
 
