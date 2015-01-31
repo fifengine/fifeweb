@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /websvn/
+Disallow: /files/
+Disallow: /js/
+Disallow: /logs/
