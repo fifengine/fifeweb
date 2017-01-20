@@ -57,9 +57,9 @@
 		<div class="navbar">
 			<div class="navbar-inner">
 				<ul class="nav">
-					<li class="active"><a href="index.html">Home</a></li>
+					<li{% if page.active == "home" %}class='active'{% endif %}><a href="index.html">Home</a></li>
 					<li class="divider-vertical"></li>
-					<li><a href="media.html">Media</a></li>
+					<li{% if page.active == "media" %}class='active'{% endif %}><a href="media.html">Media</a></li>
 					<li class="divider-vertical"></li>
 					<li><a href="http://docs.fifengine.net">Docs</a></li>
 					<li class="divider-vertical"></li>
