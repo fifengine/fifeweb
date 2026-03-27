@@ -1,3 +1,12 @@
-name: Fifengine
+title: FIFE Engine
+description: FIFE is a multi-platform isometric game engine written in C++
 markdown: kramdown
-exclude: ["Gemfile", "Gemfile.lock"]
+timezone: UTC
+future: false
+show_drafts: false
+permalink: /:title
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

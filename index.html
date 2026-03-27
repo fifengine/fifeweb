@@ -3,29 +3,122 @@ layout: default
 title: About FIFE
 active: home
 ---
-		<div class="row-fluid">
-			<div class="span8">
-				<p>Flexible Isometric Free Engine (<strong>FIFE</strong>) is a multi-platform isometric game engine written in C++.</p>
-				<p>It includes Python bindings, allowing users to create games using Python scripting as well as C++.
-				   The engine is highly portable and supports Windows, Linux, and macOS.</p>
-				<p>FIFE features GPU-accelerated 2D graphics, dynamic lighting, integrated GUI, audio support,
-				   pathfinding, a virtual filesystem, and a map editor supporting both top-down and isometric maps.</p>
-				<p>FIFE is open-sourced under the terms of the <a href="http://www.gnu.org/copyleft/lesser.html">LGPL license</a>
-				   so you can freely use it in non-commercial and commercial projects.</p>
-				<ul>
-					<li><a href="http://docs.fifengine.net/user-manual/en/#_features">Features</a></li>
-					<li><a href="https://github.com/fifengine/fifengine/wiki">Developer Wiki</a></li>
-					<li><a href="https://github.com/fifengine/cpp-tutorials">C++ Tutorials</a></li>
-					<li><a href="https://github.com/fifengine/python-tutorials">Python Tutorials</a></li>
-					<li><a href="https://github.com/fifengine/fifengine/wiki/Downloads">Downloads</a></li>
-				</ul>
-			</div>
-			<div class="showcase-unit span4">
-				<h3>Showcase</h3>
-				<ul class="thumbnails">
-					<li class="row"><a href="img/screen6.jpg" class="thumbnail fancybox" rel="gallery" data-title-id="title-1"><img src="img/screen6_thumb.jpg" /></a></li>
-					<li class="row"><a href="img/screen5.png" class="thumbnail fancybox" rel="gallery" data-title-id="title-2"><img src="img/screen5_thumb.png" /></a></li>
-					<li class="row"><a class="btn btn-primary btn-large" href="media.html">More screenshots</a></li>
-				</ul>
-			</div>
-		</div>
+<div class="grid md:grid-cols-12 gap-4">
+    <div class="md:col-span-8">
+        <h1 class="text-3xl font-bold mb-4">Flexible Isometric Free Engine</h1>
+        <p>FIFE is a multi-platform isometric game engine written in C++.</p>
+        <p>It includes Python bindings, allowing users to create games using Python scripting as well as C++.</p>
+        <p>The engine is highly portable and supports Windows, Linux, and macOS.</p>
+        <p>FIFE is open-sourced under the terms of the <a href="https://www.gnu.org/copyleft/lesser.html" class="text-blue-600 hover:underline">LGPL license</a>
+           so you can freely use it in non-commercial and commercial projects.</p>
+
+        <h2 class="text-2xl font-bold mt-6 mb-3">Features</h2>
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+            <div>
+                <h3 class="font-bold text-lg">Graphics</h3>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>GPU-accelerated 2D rendering</li>
+                    <li>Support for multiple image formats (PNG, JPEG, BMP, TGA, etc.)</li>
+                    <li>Image atlases for performance</li>
+                    <li>Dynamic lighting (OpenGL)</li>
+                    <li>Fog of War (OpenGL)</li>
+                    <li>Multiple renderers (SDL, OpenGL)</li>
+                    <li>Custom isometric and top-down views</li>
+                    <li>Automatic z-order sorting</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Maps</h3>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>XML-based map format</li>
+                    <li>Square and hexagonal grids</li>
+                    <li>Multiple layers per map</li>
+                    <li>Multiple cameras/views</li>
+                    <li>Built-in map editor</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Audio</h3>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>OggVorbis format support</li>
+                    <li>Large file streaming</li>
+                    <li>Positional audio</li>
+                    <li>Sound effects and music</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Scripting & GUI</h3>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Python scripting</li>
+                    <li>Integrated console</li>
+                    <li>FifeChan GUI</li>
+                    <li>CEGUI support</li>
+                    <li>XML layout support</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Input & Pathfinding</h3>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Mouse, keyboard, joystick events</li>
+                    <li>Custom command events</li>
+                    <li>Exchangable pathfinding backends</li>
+                    <li>Multi-cell pathfinding</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Other</h3>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Virtual filesystem (ZIP support)</li>
+                    <li>Lazy loading</li>
+                    <li>Logger with priority levels</li>
+                    <li>TrueType and bitmap fonts</li>
+                </ul>
+            </div>
+        </div>
+
+        <ul class="list-disc list-inside space-y-1 mt-6">
+            <li><a href="https://docs.fifengine.net/user-manual/en/#_features" class="text-blue-600 hover:underline">Full feature list</a></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold mt-6 mb-3">Tutorials</h2>
+        <ul class="list-disc list-inside space-y-1">
+            <li><a href="https://github.com/fifengine/cpp-tutorials" class="text-blue-600 hover:underline">C++ Tutorials</a></li>
+            <li><a href="https://github.com/fifengine/python-tutorials" class="text-blue-600 hover:underline">Python Tutorials</a></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold mt-6 mb-3">Games using FIFE</h2>
+        <p class="mb-4 text-sm">The following projects use FIFE as their engine.</p>
+        <div class="space-y-4">
+            <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-24">
+                    <img src="img/unknown-horizons-logo.svg" alt="Unknown Horizons Logo" class="w-full">
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Unknown Horizons</h3>
+                    <p class="text-sm">A city-building game and real-time strategy game, inspired by the Anno series.</p>
+                    <p class="text-sm">Released under GPLv2 with open content under CC BY-SA.</p>
+					<p class="text-sm">Now ported to Godot.</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Zero-Projekt</h3>
+                <p class="text-sm">A turn-based post apocalyptic RPG.</p>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Jagged Alliance 2 - FIFE Demo</h3>
+                <p class="text-sm">A game demo using the Jagged Alliance 2 assets in FIFE engine.</p>
+            </div>
+            <div>
+                <p class="text-sm">Other projects: PARPG, Fife RPG, SteamFolkTales, Fife Tactics</p>
+            </div>
+        </div>
+    </div>
+    <div class="md:col-span-4 bg-gray-200 p-4 rounded text-lg">
+        <h3 class="font-bold text-xl mb-2">Showcase</h3>
+        <div class="grid grid-cols-2 gap-2">
+            <a href="img/screen6.jpg" class="glightbox"><img src="img/screen6_thumb.jpg" class="w-full rounded"></a>
+            <a href="img/screen5.png" class="glightbox"><img src="img/screen5_thumb.png" class="w-full rounded"></a>
+        </div>
+        <a href="media.html" class="inline-block mt-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">More screenshots</a>
+    </div>
+</div>

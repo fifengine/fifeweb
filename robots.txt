@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /websvn/
-Disallow: /files/
-Disallow: /js/
-Disallow: /logs/
+Allow: /
+
+Sitemap: https://fifengine.github.io/sitemap.xml

@@ -1,107 +1,113 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/2000/REC-xhtml1-20000126/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="FIFE engine - open-source multi-platform isometric game engine" />
-	<meta name="keywords" content="FIFE, fife, game, engine, isometric, grid, editor, python, c++" />
-	<meta name="author" content="rivon" />
-	<title>{{ page.title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FIFE engine - open-source multi-platform isometric game engine">
+    <meta name="keywords" content="FIFE, fife, game, engine, isometric, grid, editor, python, c++">
+    <meta name="author" content="rivon">
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="FIFE Engine">
+    <meta property="og:description" content="Open-source multi-platform isometric game engine">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fifengine.github.io/">
+    <meta property="og:image" content="https://fifengine.github.io/img/screen7.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FIFE Engine">
+    <meta name="twitter:description" content="Open-source multi-platform isometric game engine">
+    <meta name="twitter:image" content="https://fifengine.github.io/img/screen7.png">
+
+    <link rel="icon" type="image/png" href="/img/FIFE_logo.png">
+
+    <title>{{ page.title }}</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <style>
-    /* GLOBAL STYLES
-    -------------------------------------------------- */
-    /* Padding below the footer and lighter body text */
-    body {
-      color: #5a5a5a;
-    }
-	.showcase-unit {
-	  padding: 5px;
-	  margin-bottom: 5px;
-	  font-size: 18px;
-	  font-weight: 200;
-	  line-height: 30px;
-	  color: inherit;
-	  background-color: #eeeeee;
-	  -webkit-border-radius: 6px;
-	     -moz-border-radius: 6px;
-	          border-radius: 6px;
-	}
-	.logo {
-	  height: 120px;
-	  -webkit-border-radius: 6px;
-	     -moz-border-radius: 6px;
-	          border-radius: 6px;
-	  background: url('img/logo_screen.png') no-repeat;
-	  background-position: right;
-	}
-	.navbar .social-buttons {
-	    margin-top: 10px;
-	}
+        .logo-container {
+            height: 120px;
+            background: url('img/logo_screen.png') no-repeat;
+            background-position: right;
+            border-radius: 0.5rem;
+        }
     </style>
 </head>
+<body class="bg-gray-100 text-gray-700">
+    <div class="container mx-auto px-4">
+        <!-- Logo -->
+        <div class="logo-container mt-4">
+            <img src="img/FIFE_logo.png" alt="FIFE Logo" class="h-full">
+        </div>
 
-<body>
-<div class="container-fluid span12">
-	<div class="logo row span12">
-		<img src="img/FIFE_logo.png" />
-	</div>
-	<div class="row span12">
-		<!-- Menu -->
-		<div class="navbar">
-			<div class="navbar-inner">
-				<ul class="nav">
-					<li {% if page.active == "home" %}class='active'{% endif %}><a href="index.html">Home</a></li>
-					<li class="divider-vertical"></li>
-					<li {% if page.active == "media" %}class='active'{% endif %}><a href="media.html">Media</a></li>
-					<li class="divider-vertical"></li>
-					<li><a href="http://docs.fifengine.net">Docs</a></li>
-					<li class="divider-vertical"></li>
-					<li><a href="https://github.com/fifengine/fifengine/discussions">Forums</a></li>
-				</ul>
-   	    		<div class="social-buttons pull-right">
-   	       			<iframe id="watch" src="http://ghbtns.com/github-btn.html?user=fifengine&repo=fifengine&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-   	      			<iframe id="fork" src="http://ghbtns.com/github-btn.html?user=fifengine&repo=fifengine&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
-   	    		</div>
-			</div>
-		</div>
-	</div>
-	<div class="container span12">
-		<!-- Content -->
-		{{ content }}
-		<footer>
-			<p><small>Copyright &copy; 2017 FIFE, Design by rivon and prock</small></p>
-		</footer>
-	</div>
-</div>
+        <!-- Slideshow -->
+        <div class="my-4 relative">
+            <div class="swiper main-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="img/screen1.png" class="glightbox"><img src="img/screen1.png" loading="lazy" class="w-full h-64 object-cover rounded"></a></div>
+                    <div class="swiper-slide"><a href="img/screen2.png" class="glightbox"><img src="img/screen2.png" loading="lazy" class="w-full h-64 object-cover rounded"></a></div>
+                    <div class="swiper-slide"><a href="img/screen3.jpg" class="glightbox"><img src="img/screen3.jpg" loading="lazy" class="w-full h-64 object-cover rounded"></a></div>
+                    <div class="swiper-slide"><a href="img/screen4.jpg" class="glightbox"><img src="img/screen4.jpg" loading="lazy" class="w-full h-64 object-cover rounded"></a></div>
+                    <div class="swiper-slide"><a href="img/screen5.png" class="glightbox"><img src="img/screen5.png" loading="lazy" class="w-full h-64 object-cover rounded"></a></div>
+                    <div class="swiper-slide"><a href="img/screen6.jpg" class="glightbox"><img src="img/screen6.jpg" loading="lazy" class="w-full h-64 object-cover rounded"></a></div>
+                    <div class="swiper-slide"><a href="img/screen7.png" class="glightbox"><img src="img/screen7.png" loading="lazy" class="w-full h-64 object-cover rounded"></a></div>
+                    <div class="swiper-slide"><a href="img/screen8.png" class="glightbox"><img src="img/screen8.png" loading="lazy" class="w-full h-64 object-cover rounded"></a></div>
+                    <div class="swiper-slide"><a href="img/screen9.png" class="glightbox"><img src="img/screen9.png" loading="lazy" class="w-full h-64 object-cover rounded"></a></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
 
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.4"></script>
-    <script type="text/javascript">
-        $(".fancybox").attr('rel', 'gallery').fancybox({
-            nextEffect: 'fade',
-            prevEffect: 'fade',
-            helpers : {
-                title: {
-                    type: 'inside'
-                }
-            },
-            beforeLoad: function() {
-                var el, id = $(this.element).data('title-id');
-                if (id) {
-                    el = $('#' + id);
-                    if (el.length) {
-                        this.title = el.html();
-                    }
-                }
-            }
+        <!-- Navbar -->
+        <nav class="bg-gray-800 text-white rounded mb-4">
+            <div class="flex items-center justify-between px-4 py-2">
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="{% if page.active == 'home' %}text-blue-400{% else %}text-white{% endif %} hover:text-blue-300">Home</a></li>
+                    <li><a href="media.html" class="{% if page.active == 'media' %}text-blue-400{% else %}text-white{% endif %} hover:text-blue-300">Media</a></li>
+                    <li><a href="https://docs.fifengine.net" class="text-white hover:text-blue-300">Docs</a></li>
+                    <li><a href="https://github.com/fifengine/fifengine/discussions" class="text-white hover:text-blue-300">Forums</a></li>
+                    <li><a href="https://github.com/fifengine/fifengine/releases" class="text-white hover:text-blue-300">Downloads</a></li>
+                    <li><a href="https://github.com/fifengine/fifengine/issues" class="text-white hover:text-blue-300">Issues</a></li>
+                    <li><a href="https://discord.gg/CBWC5KmDca" class="text-white hover:text-blue-300">Discord</a></li>
+                </ul>
+                <div class="flex space-x-2">
+                    <iframe src="https://ghbtns.com/github-btn.html?user=fifengine&repo=fifengine&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+                    <iframe src="https://ghbtns.com/github-btn.html?user=fifengine&repo=fifengine&type=sponsor" allowtransparency="true" frameborder="0" scrolling="0" width="130" height="20"></iframe>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Content -->
+        <main class="bg-white rounded p-4 mb-4">
+            {{ content }}
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center py-4 text-gray-500">
+            <p><small>Copyright &copy; 2005 to <span id="year"></span>, FIFEngine Team.</small></p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const lightbox = GLightbox({});
+
+        const mainSwiper = new Swiper('.main-swiper', {
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            loop: true,
+            effect: 'fade',
         });
     </script>
-
 </body>
+</html>
